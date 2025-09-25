@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@utility dash { border: 1px dashed; }
+
+@utility dash-all { > * { border: 1px dashed; } }
+
+@theme {
+    --color-base-100: #333333;
+    --color-base-200: #4F4F4F;
+    --color-base-300: #828282;
+    --color-base-400: #BDBDBD;
+    --color-base-500: #F2F2F2;
+
+    --text-50: 50px;
+    --text-40: 40px;
+    --text-35: 35px;
+    --text-30: 30px;
+    --text-25: 25px;
+    --text-20: 20px;
+    --text-16: 16px;
+    --text-12: 12px;
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+:root {
+    --text-size-m-h1:30px;
+    --text-size-m-h2:25px;
+    --text-size-m-h3:20px;
+    --text-size-m-h4:16px;
+    --text-size-m-h5:12px;
+
+    --text-size-h1:40px;
+    --text-size-h2:35px;
+    --text-size-h3:30px;
+    --text-size-h4:25px;
+    --text-size-h5:16px;
+
+    --base-color-100: #333333;
+    --base-color-200: #4F4F4F;
+    --base-color-300: #828282;
+    --base-color-400: #BDBDBD;
+    --base-color-500: #F2F2F2;
+
+    --background-color: #FFFFFF;
+    --text-color: var(--base-color-100);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--base-color-100);
+    --text-color: var(--base-color-500);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 600ms, color 600ms;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 35px; }
+h3 { font-size: 30px; }
+h4 { font-size: 25px; }
+h5 { font-size: 16px; }
+h6 { font-size: 12px; }
