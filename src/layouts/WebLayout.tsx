@@ -25,7 +25,7 @@ function WebLayout() {
                 <ul className='grid grid-flow-col gap-4'>
                 <li>
                     <NavLink to={figma.link} className="grid grid-flow-col items-center gap-5">
-                        Projetos <Figma className="stroke-base-100 dark:stroke-base-500"/>
+                        <Figma className="stroke-base-100 dark:stroke-base-500"/>
                     </NavLink>
                 </li>
                 <li>

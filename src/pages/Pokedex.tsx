@@ -36,16 +36,16 @@ function Pokedex() {
         <Container className="px-8 sm:px-0 grid gap-5">
             <h5 className="uppercase text-center">tipografia</h5>
             <Row>
-                <span className="grid grid-flow-col items-center gap-5 font-normal">
+                <span className="grid grid-flow-col items-center gap-5 font-normal text-base-100">
                     <span className="text-50">Aa</span> Cairo regular
                 </span>
-                <span className="grid grid-flow-col items-center gap-5 font-semibold">
+                <span className="grid grid-flow-col items-center gap-5 font-semibold text-base-100">
                     <span className="text-50">Aa</span> Cairo semibold
                 </span>
             </Row>
             <h5 className="uppercase text-center">mobile</h5>
             <Row>
-                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5 text-base-100">
                     <span className="text-35">h1 - 35</span>
                     <span className="text-30">h2 - 30</span>
                     <span className="text-25">h3 - 25</span>
@@ -56,7 +56,7 @@ function Pokedex() {
             </Row>
             <h5 className="uppercase text-center">Desktop</h5>
             <Row>
-                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5 text-base-100">
                     <span className="text-50">h1 - 50</span>
                     <span className="text-40">h2 - 40</span>
                     <span className="text-30">h3 - 30</span>
@@ -78,8 +78,8 @@ function Pokedex() {
                 <Palette colors={pokedex.types}/>
             </Row>
         </Container>
-        <Container className="py-10 grid justify-center">
-            <img src={figmaPokedex} alt="" className="rounded-xl"/>
+        <Container className="px-8 sm:px-0 py-5 sm:py-10">
+            <img src={figmaPokedex} alt="" className="w-full rounded-xl drop-shadow-sm"/>
         </Container>
         </>
     )

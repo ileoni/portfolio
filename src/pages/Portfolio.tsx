@@ -36,16 +36,16 @@ function Portfolio() {
         <Container className="px-8 sm:px-0 grid gap-5">
             <h5 className="uppercase text-center">tipografia</h5>
             <Row>
-                <span className="grid grid-flow-col items-center gap-5 font-normal">
+                <span className="grid grid-flow-col items-center gap-5 font-normal text-base-100">
                     <span className="text-50">Aa</span> Cairo regular
                 </span>
-                <span className="grid grid-flow-col items-center gap-5 font-semibold">
+                <span className="grid grid-flow-col items-center gap-5 font-semibold text-base-100">
                     <span className="text-50">Aa</span> Cairo semibold
                 </span>
             </Row>
             <h5 className="uppercase text-center">mobile</h5>
             <Row>
-                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5 text-base-100">
                     <span className="text-30">h1 - 30</span>
                     <span className="text-25">h2 - 25</span>
                     <span className="text-20">h3 - 20</span>
@@ -55,7 +55,7 @@ function Portfolio() {
             </Row>
             <h5 className="uppercase text-center">Desktop</h5>
             <Row>
-                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5 text-base-100">
                     <span className="text-40">h1 - 40</span>
                     <span className="text-35">h2 - 30</span>
                     <span className="text-30">h3 - 25</span>
@@ -68,8 +68,8 @@ function Portfolio() {
                 <Palette colors={portfolio.base}/>
             </Row>
         </Container>
-        <Container className="py-10 grid justify-center drop-shadow-xl">
-            <img src={figmaPortfolio} alt="" className="rounded-xl "/>
+        <Container className="px-5 sm:px-0 py-5 sm:py-10">
+            <img src={figmaPortfolio} alt="" className="w-full rounded-xl drop-shadow-sm"/>
         </Container>
         </>
     )

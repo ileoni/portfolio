@@ -29,7 +29,7 @@ function Home() {
                     <h2 className="text-center sm:text-start">{main.title}</h2>
                     <h1 className="font-bold text-center">{main.subtitle}</h1>
                 </div>
-                <img src={Image} alt="imagem do desenvolvedor" />
+                <img src={Image} alt="imagem do desenvolvedor" className="justify-self-center"/>
             </Container>
             <Container className="px-8 sm:px-0 py-10 grid sm:grid-flow-col justify-between gap-y-5">
                 <div className="px-2 text-center sm:text-left sm:border-l">
