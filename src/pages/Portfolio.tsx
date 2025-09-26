@@ -13,8 +13,8 @@ function Portfolio() {
 
     return (
         <>
-        <Container className="py-10">
-            <div className="grid grid-flow-col justify-between items-baseline">
+        <Container className="px-8 sm:px-0 py-5 sm:py-10">
+            <div className="py-5 sm:py-0 grid sm:grid-flow-col justify-between items-baseline">
                 <h4>{ portfolio.title }</h4>
                 <div className="grid grid-flow-col gap-5">
                     <NavLink to={link.portfolio.link.figma} target="_blank">
@@ -31,9 +31,9 @@ function Portfolio() {
                     </NavLink>
                 </div>
             </div>
-            <p>{ portfolio.description }</p>
+            <p className="text-center sm:text-start text-12 sm:text-16">{ portfolio.description }</p>
         </Container>
-        <Container className="grid gap-5">
+        <Container className="px-8 sm:px-0 grid gap-5">
             <h5 className="uppercase text-center">tipografia</h5>
             <Row>
                 <span className="grid grid-flow-col items-center gap-5 font-normal">
@@ -45,7 +45,7 @@ function Portfolio() {
             </Row>
             <h5 className="uppercase text-center">mobile</h5>
             <Row>
-                <div className="grid grid-flow-col items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
                     <span className="text-30">h1 - 30</span>
                     <span className="text-25">h2 - 25</span>
                     <span className="text-20">h3 - 20</span>
@@ -55,7 +55,7 @@ function Portfolio() {
             </Row>
             <h5 className="uppercase text-center">Desktop</h5>
             <Row>
-                <div className="grid grid-flow-col items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
                     <span className="text-40">h1 - 40</span>
                     <span className="text-35">h2 - 30</span>
                     <span className="text-30">h3 - 25</span>

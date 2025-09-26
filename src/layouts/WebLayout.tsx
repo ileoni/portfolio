@@ -13,7 +13,7 @@ function WebLayout() {
 
     return (
         <>
-        <Header className='h-20'>
+        <Header className='h-20 px-4 sm:px-0'>
             <div className='grid grid-flow-col justify-between items-center'>
             <div className='grid grid-flow-col items-center gap-4'>
                 <NavLink to="/">

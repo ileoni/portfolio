@@ -13,8 +13,8 @@ function Pokedex() {
 
     return (
         <>
-        <Container className="py-10">
-            <div className="grid grid-flow-col justify-between items-baseline">
+        <Container className="px-8 sm:px-0 py-5 sm:py-10">
+            <div className="py-5 sm:py-0 grid sm:grid-flow-col justify-between items-baseline">
                 <h4>{ pokedex.title }</h4>
                 <div className="grid grid-flow-col gap-5">
                     <NavLink to={link.pokedex.link.figma} target="_blank">
@@ -31,9 +31,9 @@ function Pokedex() {
                     </NavLink>
                 </div>
             </div>
-            <p>{ pokedex.description }</p>
+            <p className="text-center sm:text-start text-12 sm:text-16">{ pokedex.description }</p>
         </Container>
-        <Container className="grid gap-5">
+        <Container className="px-8 sm:px-0 grid gap-5">
             <h5 className="uppercase text-center">tipografia</h5>
             <Row>
                 <span className="grid grid-flow-col items-center gap-5 font-normal">
@@ -45,7 +45,7 @@ function Pokedex() {
             </Row>
             <h5 className="uppercase text-center">mobile</h5>
             <Row>
-                <div className="grid grid-flow-col items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
                     <span className="text-35">h1 - 35</span>
                     <span className="text-30">h2 - 30</span>
                     <span className="text-25">h3 - 25</span>
@@ -56,7 +56,7 @@ function Pokedex() {
             </Row>
             <h5 className="uppercase text-center">Desktop</h5>
             <Row>
-                <div className="grid grid-flow-col items-baseline gap-5">
+                <div className="grid sm:grid-flow-col justify-items-center sm:justify-items-normal items-baseline gap-5">
                     <span className="text-50">h1 - 50</span>
                     <span className="text-40">h2 - 40</span>
                     <span className="text-30">h3 - 30</span>

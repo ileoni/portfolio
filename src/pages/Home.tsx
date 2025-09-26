@@ -24,28 +24,28 @@ function Home() {
 
     return (
         <>
-            <Container className="py-10 grid grid-flow-col justify-between">
+            <Container className="px-8 sm:px-0 py-5 sm:py-10 grid sm:grid-flow-col justify-between gap-y-5">
                 <div className="grid place-content-center">
-                    <h2>{main.title}</h2>
-                    <h1 className="font-bold">{main.subtitle}</h1>
+                    <h2 className="text-center sm:text-start">{main.title}</h2>
+                    <h1 className="font-bold text-center">{main.subtitle}</h1>
                 </div>
                 <img src={Image} alt="imagem do desenvolvedor" />
             </Container>
-            <Container className="py-10 grid grid-flow-col justify-between">
-                <div className="px-2 border-l">
-                    <h4>{about.left.title}</h4>
-                    <p>{about.left.paragraph}</p>
+            <Container className="px-8 sm:px-0 py-10 grid sm:grid-flow-col justify-between gap-y-5">
+                <div className="px-2 text-center sm:text-left sm:border-l">
+                    <h4 className="py-2 sm:py-0">{about.left.title}</h4>
+                    <p className="text-12 sm:text-16">{about.left.paragraph}</p>
                 </div>
-                <div className="px-2 text-right border-r">
-                    <h4>{about.right.title}</h4>
-                    <p>{about.right.paragraph}</p>
+                <div className="px-2 text-center sm:text-right sm:border-r">
+                    <h4 className="py-2 sm:py-0">{about.right.title}</h4>
+                    <p className="text-12 sm:text-16">{about.right.paragraph}</p>
                 </div>
             </Container>
-            <Container className="py-10 grid gap-5">
-                <h4>{skill.title}</h4>
+            <Container className="px-8 sm:px-0 py-10 grid gap-5">
+                <h4 className="text-center sm:text-start">{skill.title}</h4>
                 <div className="grid gap-5">
                     <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
-                        <p>{skill.row.language.title}</p>
+                        <p className="text-12 sm:text-16">{skill.row.language.title}</p>
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
                                 <NavLink to={skill.row.language.link.javascript} target="_blank">
@@ -65,7 +65,7 @@ function Home() {
                         </ul>
                     </div>
                     <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
-                        <p>{skill.row.frontend.title}</p> 
+                        <p className="text-12 sm:text-16">{skill.row.frontend.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
                                 <NavLink  to={skill.row.frontend.link.react} target="_blank">
@@ -90,7 +90,7 @@ function Home() {
                         </ul>
                     </div>
                     <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
-                        <p>{skill.row.backend.title}</p> 
+                        <p className="text-12 sm:text-16">{skill.row.backend.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
                                 <NavLink  to={skill.row.backend.link.express} target="_blank">
@@ -110,7 +110,7 @@ function Home() {
                         </ul>
                     </div>
                     <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
-                        <p>{skill.row.others.title}</p> 
+                        <p className="text-12 sm:text-16">{skill.row.others.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
                                 <NavLink  to={skill.row.others.link.npm} target="_blank">
