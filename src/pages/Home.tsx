@@ -1,50 +1,58 @@
-import Container from "../components/Container";
-
-import { useConfigs } from "../hooks/useConfigs";
-import Image from "../assets/home-page.png"
-import Javascript from "../assets/js.svg"
-import Php from "../assets/php.svg"
-import Typescript from "../assets/typescript.svg"
-import React from "../assets/react.svg"
-import Tailwindcss from "../assets/tailwind_css_symbol.svg"
-import Css from "../assets/css_3.svg"
-import Html from "../assets/html_5.svg"
-import Express from "../assets/express.svg"
-import Node from "../assets/node_js.svg"
-import Laravel from "../assets/laravel.svg"
-import Npm from "../assets/npm.svg"
-import Redis from "../assets/redis.svg"
-import Mysql from "../assets/mysql.svg"
-import Vite from "../assets/vite.svg"
-import Github from "../assets/github.svg"
+import { createRef, useEffect, useRef } from "react";
 import { NavLink } from "react-router";
 
+import { useConfigs } from "../hooks/useConfigs";
+import {
+    MyImage,
+    Javascript,
+    Php,
+    Typescript,
+    React,
+    Tailwindcss,
+    Css,
+    Html,
+    Express,
+    Node,
+    Laravel,
+    Npm,
+    Redis,
+    Mysql,
+    Vite,
+    Github,
+} from "../configs/images";
+import Container from "../components/Container";
+import { useGsapOpacity } from "../hooks/useGsapOpacity";
+import { useGsap } from "../hooks/useGsap";
+
 function Home() {
+    const [ left, right ] = useGsap(2);
+    const [ language, front, back, other ] = useGsapOpacity(4);
+
     const { main, about, skill } = useConfigs("pages.home");
 
     return (
         <>
-            <Container className="px-8 sm:px-0 py-5 sm:py-10 grid sm:grid-flow-col justify-between gap-y-5">
+            <Container className="h-container grid sm:grid-flow-col content-center sm:justify-between items-center gap-y-5">
                 <div className="grid place-content-center">
                     <h2 className="text-center sm:text-start">{main.title}</h2>
                     <h1 className="font-bold text-center">{main.subtitle}</h1>
                 </div>
-                <img src={Image} alt="imagem do desenvolvedor" className="justify-self-center"/>
+                <img src={MyImage} alt="imagem do desenvolvedor" className="justify-self-center"/>
             </Container>
-            <Container className="px-8 sm:px-0 py-10 grid sm:grid-flow-col justify-between gap-y-5">
-                <div className="px-2 text-center sm:text-left sm:border-l">
+            <Container className="overflow-hidden px-5 sm:px-0 py-10 grid sm:grid-flow-col justify-between gap-y-5">
+                <div ref={left} className="-translate-x-full px-2 text-center sm:text-left sm:border-l">
                     <h4 className="py-2 sm:py-0">{about.left.title}</h4>
                     <p className="text-12 sm:text-16">{about.left.paragraph}</p>
                 </div>
-                <div className="px-2 text-center sm:text-right sm:border-r">
+                <div ref={right} className="translate-x-full px-2 text-center sm:text-right sm:border-r">
                     <h4 className="py-2 sm:py-0">{about.right.title}</h4>
                     <p className="text-12 sm:text-16">{about.right.paragraph}</p>
                 </div>
             </Container>
-            <Container className="px-8 sm:px-0 py-10 grid gap-5">
+            <Container className="overflow-hidden px-5 sm:px-0 py-10 grid gap-5">
                 <h4 className="text-center sm:text-start">{skill.title}</h4>
                 <div className="grid gap-5">
-                    <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
+                    <div ref={language} className="opacity-0 p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
                         <p className="text-12 sm:text-16">{skill.row.language.title}</p>
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
@@ -64,7 +72,7 @@ function Home() {
                             </li>
                         </ul>
                     </div>
-                    <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
+                    <div ref={front} className="opacity-0 p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
                         <p className="text-12 sm:text-16">{skill.row.frontend.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
@@ -89,7 +97,7 @@ function Home() {
                             </li>
                         </ul>
                     </div>
-                    <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
+                    <div ref={back} className="opacity-0 p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
                         <p className="text-12 sm:text-16">{skill.row.backend.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>
@@ -109,7 +117,7 @@ function Home() {
                             </li>
                         </ul>
                     </div>
-                    <div className="p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
+                    <div ref={other} className="opacity-0 p-5 grid gap-5 bg-base-500 dark:bg-base-300 rounded-md text-base-100">
                         <p className="text-12 sm:text-16">{skill.row.others.title}</p> 
                         <ul className="grid grid-flow-col justify-start items-center gap-2">
                             <li>

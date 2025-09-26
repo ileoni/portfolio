@@ -3,11 +3,11 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
 @utility dash { border: 1px dashed; }
 
 @utility dash-all { > * { border: 1px dashed; } }
+
+@utility h-container { & { height: calc(100svh - 80px); } }
 
 @theme {
     --color-base-100: #333333;
